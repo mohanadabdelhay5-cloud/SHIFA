@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>شفاء Shifa</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script>(function(){var d=document.documentElement;if(!(window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches)){d.classList.add("intro");setTimeout(function(){d.classList.remove("intro")},4500)}})()</script>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="leaf" viewBox="6 6 32 38"><path d="M22 40V14"/><path d="M22 26c-7 0-11-4-11-11 7 0 11 4 11 11Z"/><path d="M22 20c0-6 4-10 11-10 0 7-4 10-11 10Z"/></symbol></svg>
+
+<header class="hdr" id="hdr">
+  <div class="wrap hdr__in">
+    <a class="brand" href="#home" data-go="home" aria-label="شفاء، الرئيسية"><i><svg><use href="#leaf"/></svg></i><span>شفاء</span><small>SHIFA</small></a>
+    <nav class="nav" aria-label="الرئيسية">
+      <a href="#system" data-go="system">النظام</a>
+      <a href="#start" data-go="start">كيف نبدأ</a>
+      <a href="#questions" data-go="questions">أسئلة</a>
+      <a href="#contact" data-go="contact">تواصل</a>
+    </nav>
+    <div class="hdr__cta">
+      <a class="btn btn--go" href="#contact" data-go="contact">اطلب عرضًا في عيادتك</a>
+      <button class="burger" id="burger" aria-label="القائمة" aria-expanded="false"><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<div class="sheet" id="sheet">
+  <nav aria-label="القائمة">
+    <a href="#home" data-go="home">الرئيسية</a>
+    <a href="#system" data-go="system">النظام</a>
+    <a href="#start" data-go="start">كيف نبدأ</a>
+    <a href="#questions" data-go="questions">أسئلة</a>
+    <a href="#contact" data-go="contact">تواصل</a>
+  </nav>
+  <p class="muted">شفاء · نظام إدارة عيادات الأسنان</p>
+</div>
+<div class="veil" id="veil" aria-hidden="true"><div class="veil__in"><svg viewBox="6 6 32 38"><path class="vl" d="M22 40V14"/><path class="vl" d="M22 26c-7 0-11-4-11-11 7 0 11 4 11 11Z"/><path class="vl" d="M22 20c0-6 4-10 11-10 0 7-4 10-11 10Z"/></svg><b id="veilName">شفاء</b></div></div>
+<button class="badge" id="badge" aria-label="العودة إلى أعلى الصفحة"><svg viewBox="6 6 32 38"><path d="M22 40V14"/><path class="lf" id="lf1" d="M22 26c-7 0-11-4-11-11 7 0 11 4 11 11Z"/><path class="lf" id="lf2" d="M22 20c0-6 4-10 11-10 0 7-4 10-11 10Z"/></svg></button>
+
+<main>
+<!-- ============ HOME ============ -->
+<article class="view is-active" data-view="home" data-title="شفاء">
+  <section class="hero">
+    <div class="wrap hero__grid">
+      <div class="hero__text">
+        <p class="tag">نظام إدارة عيادات الأسنان</p>
+        <h1 class="h1" data-split>اعرف ما يدين به<br>كل مريض لك، <em>اليوم.</em></h1>
+        <p class="lede" data-rise>شفاء يتابع المستحقات، والعلاجات التي لم تكتمل، والمواعيد المنسية. يعمل داخل عيادتك من دون إنترنت، وبياناتك تبقى عندك.</p>
+        <div class="hero__cta" data-rise>
+          <a class="btn btn--go" href="#contact" data-go="contact">اطلب عرضًا في عيادتك</a>
+          <a class="btn btn--line" href="#system" data-go="system">شاهد النظام</a>
+        </div>
+      </div>
+      <div data-rise>
+        <div class="app" id="app" aria-label="شاشة اليوم في شفاء، ببيانات تجريبية">
+          <div class="app__side"><b><svg viewBox="6 6 32 38"><use href="#leaf"/></svg>شفاء</b><span class="on">اليوم</span><span>المواعيد</span><span>المرضى</span><span>الحسابات</span><span>المصروفات</span><span>التقارير</span></div>
+          <div class="app__main">
+            <div class="app__top"><strong>اليوم</strong><span class="net" id="net">متصل بشبكة العيادة</span></div>
+            <div class="kpis">
+              <div class="kpi"><small>محجوز</small><b class="num" id="k1">3</b></div>
+              <div class="kpi warn"><small>انتظار</small><b class="num" id="k2">2</b></div>
+              <div class="kpi"><small>كشف</small><b class="num" id="k3">1</b></div>
+              <div class="kpi"><small>تم</small><b class="num" id="k4">7</b></div>
+              <div class="kpi"><small>المحصَّل</small><b class="num" id="k5">4,350</b></div>
+            </div>
+            <div class="rows" id="rows">
+              <div class="rw hd"><span>الوقت</span><span>المريض</span><span>الطبيب</span><span>الحالة</span></div>
+            </div>
+          </div>
+        </div>
+        <p class="demo">بيانات تجريبية، والشاشة تتحرك كما في يوم عمل</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="blk blk--linen">
+    <div class="wrap">
+      <div class="head">
+        <div><p class="tag">قبل شفاء وبعده</p><h2 class="h2">نفس العيادة، نفس المرضى. <em>الفرق في الدفتر.</em></h2></div>
+        <p class="lede">اسحب الخط يمينًا ويسارًا. على اليمين دفتر الاستقبال كما هو في أغلب العيادات، وعلى اليسار الصفحة نفسها في شفاء.</p>
+      </div>
+      <div class="ba" id="ba">
+        <div class="ba__pane ba__after">
+          <span class="ba__lab a">بعد</span>
+          <table class="led">
+            <thead><tr><th>المريض</th><th>الإجمالي</th><th>المدفوع</th><th>المستحق</th></tr></thead>
+            <tbody>
+              <tr><td>أحمد علي</td><td class="num">2,400</td><td class="num">2,100</td><td class="num due">300</td></tr>
+              <tr><td>منى حسن</td><td class="num">1,800</td><td class="num">1,800</td><td class="num">0</td></tr>
+              <tr><td>سارة محمود</td><td class="num">3,500</td><td class="num">1,500</td><td class="num due">2,000</td></tr>
+              <tr><td>كريم سعيد</td><td class="num">900</td><td class="num">0</td><td class="num due">900</td></tr>
+            </tbody>
+            <tfoot><tr><td>المستحق لك اليوم</td><td></td><td></td><td class="num due">3,200</td></tr></tfoot>
+          </table>
+        </div>
+        <div class="ba__pane ba__before" aria-hidden="true">
+          <span class="ba__lab b">قبل</span>
+          <p>&nbsp;</p>
+          <p>أحمد علي .. باقي ٣٠٠ ؟ ولا ٥٠٠</p>
+          <p>منى حسن — <s>دفعت ١٠٠٠</s> دفعت كله تقريبًا</p>
+          <p>سارة محمود .. حشو + عصب، الزيارة الثانية <u>متى؟</u></p>
+          <p>كريم سعيد — لسه مدفعش، اسأل الدكتور</p>
+          <p><s>المجموع ٢٩٠٠</s> &nbsp; ٣٤٠٠ ؟؟</p>
+          <p>ورقة الأشعة مع مين؟</p>
+        </div>
+        <input type="range" min="4" max="96" value="50" id="baRange" aria-label="اسحب للمقارنة بين الدفتر وشفاء">
+        <div class="ba__bar"></div>
+      </div>
+      <p class="demo">أسماء وأرقام تجريبية</p>
+    </div>
+  </section>
+
+  <section class="blk">
+    <div class="wrap">
+      <div class="head">
+        <div><p class="tag">أين يتسرّب المال</p><h2 class="h2">ثلاثة أماكن تخسر فيها العيادة، <em>وشفاء يلتقطها.</em></h2></div>
+        <p class="lede">علاج الأسنان طويل ويُدفع على أجزاء. ما لا يُسجَّل في لحظته يضيع.</p>
+      </div>
+      <div class="leaks">
+        <div class="leak"><span class="n num">01</span><div><h3>مستحقات لا يتابعها أحد</h3><p>المريض يدفع جزءًا ويؤجّل الباقي، ثم لا يتذكر أحد كم بقي.</p></div><div class="catch"><b>ما يفعله شفاء</b><span>الفاتورة تُنشأ تلقائيًا عند توقيع الزيارة، وتبقى «جزئية» حتى يُسدَّد الباقي. المستحق ظاهر أمام الاستقبال في كل مرة.</span></div></div>
+        <div class="leak"><span class="n num">02</span><div><h3>علاج بدأ ولم يكتمل</h3><p>زيارة واحدة ثم يختفي المريض، ويضيع باقي الخطة.</p></div><div class="catch"><b>ما يفعله شفاء</b><span>كل علاج جارٍ يظهر في الزيارة التالية بزر «أكمل اليوم». وإذا مرّت فترة بلا حركة، يدخل قائمة التذكيرات باسم المريض ورقم هاتفه.</span></div></div>
+        <div class="leak"><span class="n num">03</span><div><h3>كرسي فارغ وموعد منسيّ</h3><p>مريض لم يحضر، ومراجعة دورية لم تُحجز.</p></div><div class="catch"><b>ما يفعله شفاء</b><span>تذكير بموعد الغد وبالمراجعة الدورية. رسالة واتساب مكتوبة وجاهزة، والاستقبال يرسلها بضغطة ويسجّل نتيجة الاتصال.</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="blk blk--linen">
+    <div class="wrap off" id="offBox">
+      <div style="display:grid;gap:18px;justify-items:start">
+        <p class="tag">يعمل من دون إنترنت</p>
+        <h2 class="h2">اقطع الإنترنت. <em>العيادة لا تتوقف.</em></h2>
+        <p class="lede">شفاء يعمل على جهاز داخل عيادتك وعلى شبكتها الداخلية. لا يحتاج إلى الإنترنت ليحجز أو يحصّل أو يطبع.</p>
+        <button class="sw" id="sw" aria-pressed="false"><i></i><span id="swLab">جرّب: اقطع الإنترنت</span></button>
+      </div>
+      <div class="grid">
+        <div class="card"><span class="n num">01</span><h3>بياناتك عندك</h3><p>ملفات المرضى على جهاز العيادة نفسه، لا على خادم بعيد.</p></div>
+        <div class="card"><span class="n num">02</span><h3>نسخة احتياطية كل يوم</h3><p>نسخ يومي تلقائي، مع نسخة على وسيط خارجي ونسخة خارج العيادة.</p></div>
+        <div class="card"><span class="n num">03</span><h3>عربي أولًا</h3><p>الواجهة عربية من اليمين إلى اليسار، ومعها الإنجليزية. كل مستخدم يختار لغته.</p></div>
+        <div class="card"><span class="n num">04</span><h3>من الهاتف أيضًا</h3><p>الطبيب يفتح النظام من هاتفه داخل شبكة العيادة.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="blk">
+    <div class="wrap">
+      <div class="band">
+        <svg viewBox="6 6 32 38" aria-hidden="true"><use href="#leaf"/></svg>
+        <h2 class="h2">نعرضه عليك في عيادتك، على حالات تشبه حالاتك.</h2>
+        <p style="max-width:52ch;color:var(--mist)">عيادة تجريبية بثلاثة مرضى: واحد عليه مستحق، وواحد لم يحضر، وواحد علاجه لم يكتمل. ترى في خمس دقائق كيف يلتقط النظام كل حالة.</p>
+        <a class="btn" href="#contact" data-go="contact">اطلب العرض</a>
+      </div>
+    </div>
+  </section>
+</article>
+
+<!-- ============ SYSTEM ============ -->
+<article class="view" data-view="system" data-title="النظام">
+  <section class="hero hero--sub">
+    <div class="wrap hero__grid"><div class="hero__text">
+      <p class="tag">النظام</p>
+      <h1 class="h1" data-split>مبنيّ على <em>يوم العيادة</em> كما يحدث فعلًا.</h1>
+      <p class="lede" data-rise>حجز، وصول، كشف، روشتة، فاتورة. كل خطوة تسلّم التي بعدها، وكل إجراء مسجَّل باسم صاحبه.</p>
+    </div></div>
+  </section>
+
+  <section class="blk" style="padding-top:10px">
+    <div class="wrap">
+      <div class="head"><div><p class="tag">مخطط الفم</p><h2 class="h2">لكل سنّ <em>تاريخه.</em></h2></div><p class="lede">اضغط على أي سنّ لترى ما أُجري عليه ومتى. المخطط بترقيم FDI، ويمين المريض على يسار الشاشة.</p></div>
+      <div class="mouth">
+        <div><div class="chart" id="chart" aria-label="مخطط أسنان تجريبي"></div>
+          <div class="legend"><span><i style="background:#7E9A8A"></i>حشو</span><span><i style="background:#24493F"></i>تاج</span><span><i style="background:#E1E9E3"></i>قشرة</span><span><i style="background:#F6EEDD;border-color:#9A6B1F"></i>علاج جارٍ</span><span><i style="background:#F6E6E1;border-color:#A04A38"></i>مشكلة مفتوحة</span><span><i style="border-style:dashed"></i>مفقود</span></div>
+          <p class="demo">ملف مريض تجريبي</p></div>
+        <div class="rec" id="rec" aria-live="polite"><p class="tag">السنّ</p><div class="rec__no num">36</div><h3 class="h3">علاج عصب، جارٍ</h3><ul><li>الزيارة الأولى<small class="num">5 نوفمبر 2026</small></li><li>أُكمل اليوم، الزيارة الثانية<small class="num">12 نوفمبر 2026</small></li><li>الزيارة القادمة<small class="num">19 نوفمبر 2026</small></li></ul></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="blk blk--linen">
+    <div class="wrap">
+      <div class="head"><div><p class="tag">لكل دور شاشته</p><h2 class="h2">ثلاثة أشخاص، <em>ثلاث طرق لاستخدامه.</em></h2></div><p class="lede">اختر دورك في العيادة.</p></div>
+      <div class="tabs" role="tablist">
+        <button class="tab" role="tab" aria-selected="true" data-tab="t1">الاستقبال</button>
+        <button class="tab" role="tab" aria-selected="false" data-tab="t2">الطبيب</button>
+        <button class="tab" role="tab" aria-selected="false" data-tab="t3">صاحب العيادة</button>
+      </div>
+      <div class="pane is-on" id="t1"><div class="feats">
+        <div class="feat"><h3>شاشة اليوم</h3><p>من حجز، من ينتظر، من في الكشف، من انتهى، وكم حُصِّل. تتحدث وحدها كل بضع ثوانٍ.</p></div>
+        <div class="feat"><h3>الحجز</h3><p>ابحث بالاسم أو الهاتف أو رقم الملف. النظام ينبّه إذا كان الوقت محجوزًا أو خارج ساعات الطبيب.</p></div>
+        <div class="feat"><h3>الوصول ورقم الدور</h3><p>ضغطة واحدة تُدخل المريض في الدور. من يتأخر يُنقل تلقائيًا إلى أول مكان متاح.</p></div>
+        <div class="feat"><h3>مريض بدون حجز</h3><p>حالة طارئة تُسجَّل فورًا في أقرب موعد، والمواعيد التي بعدها تتحرك وحدها.</p></div>
+        <div class="feat"><h3>التحصيل والإيصال</h3><p>دفع كامل أو جزئي، وإيصال يُطبع. الفواتير غير المسدَّدة تُعرض بفلتر واحد.</p></div>
+        <div class="feat"><h3>شاشة غرفة الانتظار</h3><p>تعرض الدور على تلفزيون العيادة وتنادي اسم المريض بالصوت، بالعربية ثم الإنجليزية.</p></div>
+      </div></div>
+      <div class="pane" id="t2"><div class="feats">
+        <div class="feat"><h3>مخطط الفم</h3><p>الأسنان الدائمة واللبنية، والحالة الحالية لكل سنّ مع تاريخه كاملًا.</p></div>
+        <div class="feat"><h3>علاج على عدة زيارات</h3><p>العلاج الجاري يظهر في كل زيارة لاحقة: «أكمل اليوم» أو «أنهِه اليوم».</p></div>
+        <div class="feat"><h3>روشتة على ورقك</h3><p>تُطبع على ورق العيادة المطبوع أو على قالب النظام.</p></div>
+        <div class="feat"><h3>تحذير الحساسية</h3><p>إذا وُصف دواء يتعارض مع حساسية مسجَّلة، يتوقف النظام ويسألك قبل الحفظ.</p></div>
+        <div class="feat"><h3>ملف المريض</h3><p>الزيارات، الروشتات، التحاليل، والأشعة والمستندات المرفقة في مكان واحد.</p></div>
+        <div class="feat"><h3>مرضاك فقط</h3><p>كل طبيب يرى زياراته وأرقامه هو، لا زيارات زميله.</p></div>
+      </div></div>
+      <div class="pane" id="t3"><div class="feats">
+        <div class="feat"><h3>التقارير</h3><p>الإيراد والمصروفات والزيارات وعدم الحضور، مع تصدير إلى Excel و PDF.</p></div>
+        <div class="feat"><h3>سجل التدقيق</h3><p>كل إضافة وتعديل وتحصيل مسجَّل باسم من قام به ووقته. لا يُحذف.</p></div>
+        <div class="feat"><h3>نتائج التذكيرات</h3><p>كم مريضًا تواصلتم معه، وكم عاد، وكم أدخلت عودته من إيراد.</p></div>
+        <div class="feat"><h3>استيراد الملفات القديمة</h3><p>بيانات مرضاك السابقة تدخل النظام، والأوراق تُمسح ضوئيًا وتُربط بالملف.</p></div>
+        <div class="feat"><h3>النسخ الاحتياطي</h3><p>نسخ يومي، واختبار استرجاع دوري يتأكد أن النسخة صالحة فعلًا.</p></div>
+        <div class="feat"><h3>المصروفات</h3><p>مصروفات العيادة تُسجَّل يومًا بيوم وتدخل في تقرير الصافي.</p></div>
+      </div></div>
+    </div>
+  </section>
+
+  <section class="blk"><div class="wrap"><div class="band"><svg viewBox="6 6 32 38" aria-hidden="true"><use href="#leaf"/></svg><h2 class="h2">الأفضل أن تراه يعمل.</h2><a class="btn" href="#contact" data-go="contact">اطلب عرضًا في عيادتك</a></div></div></section>
+</article>
+
+<!-- ============ START ============ -->
+<article class="view" data-view="start" data-title="كيف نبدأ">
+  <section class="hero hero--sub">
+    <div class="wrap hero__grid"><div class="hero__text">
+      <p class="tag">كيف نبدأ</p>
+      <h1 class="h1" data-split>جهاز واحد يدخل العيادة، <em>وكل شيء عليه.</em></h1>
+      <p class="lede" data-rise>لا تشتري خادمًا ولا تتعاقد مع شركة إنترنت. نحضر الجهاز مُعَدًّا، ونشغّله، وندرّب الفريق.</p>
+    </div></div>
+  </section>
+  <section class="blk" style="padding-top:10px">
+    <div class="wrap">
+      <div class="steps">
+        <div class="step"><h3>نزور العيادة</h3><p>نرى كيف يسير يومكم الآن: الدفتر، الحجز، التحصيل. ونعرض النظام على حالات تشبه حالاتكم.</p></div>
+        <div class="step"><h3>نركّب الجهاز</h3><p>حاسوب صغير يوضع في العيادة ويتصل بشبكتها. أجهزة الاستقبال والأطباء والهواتف تفتح النظام من المتصفح.</p></div>
+        <div class="step"><h3>ننقل ملفاتكم</h3><p>بيانات المرضى السابقة تُستورد، والأوراق المهمة تُمسح ضوئيًا وتُربط بملف صاحبها.</p></div>
+        <div class="step"><h3>ندرّب الفريق</h3><p>الاستقبال والأطباء يعملون يومًا حقيقيًا على النظام ونحن معهم. ومعهم دليل مصوَّر بالعربية.</p></div>
+        <div class="step"><h3>نبقى معكم</h3><p>نسخ احتياطي يومي، وفحص تلقائي لسلامة النظام، ودعم بالعربية حين تحتاجونه.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="blk blk--linen">
+    <div class="wrap cols">
+      <div style="display:grid;gap:16px;justify-items:start"><p class="tag">لمن صُمِّم</p><h2 class="h2">عيادة من كرسيّ إلى ثلاثة، <em>والطبيب صاحبها.</em></h2></div>
+      <ul class="ticks"><li>تدفع ثمنه مرة واحدة. لا اشتراك شهري، والنظام لا يتوقف إذا توقفت عن الدفع.</li><li>البيانات ملكك، وعلى جهازك.</li><li>لا يحتاج إلى موظف تقنية معلومات في العيادة.</li><li>يدعم أكثر من طبيب في العيادة نفسها، ولكلٍّ جدوله ومرضاه.</li></ul>
+    </div>
+  </section>
+  <section class="blk"><div class="wrap"><div class="band"><svg viewBox="6 6 32 38" aria-hidden="true"><use href="#leaf"/></svg><h2 class="h2">الخطوة الأولى زيارة.</h2><a class="btn" href="#contact" data-go="contact">حدّد موعدها</a></div></div></section>
+</article>
+
+<!-- ============ QUESTIONS ============ -->
+<article class="view" data-view="questions" data-title="أسئلة">
+  <section class="hero hero--sub">
+    <div class="wrap hero__grid"><div class="hero__text">
+      <p class="tag">أسئلة</p>
+      <h1 class="h1" data-split>ما يسأله الأطباء <em>قبل أن يقرّروا.</em></h1>
+    </div></div>
+  </section>
+  <section class="blk" style="padding-top:10px">
+    <div class="wrap">
+      <div class="acc">
+        <details open><summary>أنا متعوّد على الدفتر. لماذا أغيّر؟<i></i></summary><p>لأن الدفتر لا يخبرك كم يدين لك كل مريض اليوم، ولا من بدأ علاجًا ولم يعد. ملفاتك القديمة تدخل النظام، والاستقبال يتعلمه في يوم عمل واحد.</p></details>
+        <details><summary>ماذا لو تعطّل الجهاز أو ضاعت البيانات؟<i></i></summary><p>النظام ينسخ بياناته كل يوم، ويحتفظ بنسخة على وسيط خارجي ونسخة خارج العيادة. ويختبر استرجاع النسخة دوريًا ليتأكد أنها تعمل.</p></details>
+        <details><summary>الإنترنت عندي ضعيف وينقطع.<i></i></summary><p>شفاء لا يعتمد عليه. يعمل على شبكة العيادة الداخلية. الإنترنت يلزم فقط عند إرسال رسالة واتساب من هاتف الاستقبال.</p></details>
+        <details><summary>موظفة الاستقبال لن تستخدمه.<i></i></summary><p>الواجهة عربية وبسيطة، وشاشة «اليوم» فيها كل ما تحتاجه. نحن ندرّبها في العيادة ونترك معها دليلًا مصوَّرًا.</p></details>
+        <details><summary>كيف أتأكد أن كل ما حُصِّل مسجَّل؟<i></i></summary><p>كل تحصيل يُسجَّل باسم من استلمه ووقته في سجل لا يُحذف. وفي آخر اليوم تطابق النقدية مع تقرير اليوم من هاتفك.</p></details>
+        <details><summary>هناك أنظمة أرخص باشتراك شهري.<i></i></summary><p>تلك تتوقف حين تتوقف عن الدفع، وبياناتك على خوادمها. شفاء تشتريه مرة، ويبقى عندك وبياناتك معه.</p></details>
+        <details><summary>هل يرسل النظام رسائل واتساب وحده؟<i></i></summary><p>لا. النظام يجهّز قائمة من يجب تذكيرهم ونص الرسالة، والاستقبال يرسلها بضغطة من واتساب ويسجّل النتيجة. هكذا يبقى النظام نفسه بلا إنترنت.</p></details>
+      </div>
+    </div>
+  </section>
+  <section class="blk"><div class="wrap"><div class="band"><svg viewBox="6 6 32 38" aria-hidden="true"><use href="#leaf"/></svg><h2 class="h2">عندك سؤال آخر؟</h2><a class="btn" href="#contact" data-go="contact">اسألنا</a></div></div></section>
+</article>
+
+<!-- ============ CONTACT ============ -->
+<article class="view" data-view="contact" data-title="تواصل">
+  <section class="hero hero--sub">
+    <div class="wrap hero__grid"><div class="hero__text">
+      <p class="tag">تواصل</p>
+      <h1 class="h1" data-split>نأتي إليك <em>ونعرضه في عيادتك.</em></h1>
+      <p class="lede" data-rise>اكتب بياناتك، ونجهّز لك رسالة الطلب.</p>
+    </div></div>
+  </section>
+  <section class="blk" style="padding-top:10px">
+    <div class="wrap cols">
+      <div style="display:grid;gap:18px;justify-items:start">
+        <h2 class="h3">ماذا يحدث بعد الطلب</h2>
+        <ul class="ticks" style="width:100%"><li>نتصل بك لتحديد موعد يناسب العيادة.</li><li>نعرض النظام على عيادة تجريبية بثلاثة مرضى.</li><li>تسأل ما تشاء، وتقرّر على مهلك.</li></ul>
+      </div>
+      <div class="panel">
+        <form class="form" id="form">
+          <div class="fld"><label for="f-name">الاسم</label><input id="f-name" name="الاسم" required autocomplete="name"></div>
+          <div class="fld"><label for="f-clinic">اسم العيادة</label><input id="f-clinic" name="العيادة"></div>
+          <div class="fld"><label for="f-city">المدينة</label><input id="f-city" name="المدينة"></div>
+          <div class="fld"><label for="f-phone">رقم الهاتف</label><input id="f-phone" name="الهاتف" type="tel" required autocomplete="tel" dir="ltr"></div>
+          <div class="fld full"><label for="f-chairs">عدد الكراسي</label><select id="f-chairs" name="عدد الكراسي"><option>1</option><option>2</option><option>3</option><option>أكثر من 3</option></select></div>
+          <div class="fld full"><label for="f-msg">ملاحظات</label><textarea id="f-msg" name="ملاحظات"></textarea></div>
+          <div class="full"><button class="btn btn--go" type="submit">جهّز رسالة الطلب</button></div>
+        </form>
+        <div class="draft" id="draft"><p class="tag">رسالتك جاهزة</p><pre></pre><div class="hero__cta"><button class="btn btn--go" id="copy">انسخ الرسالة</button></div><p class="muted" style="font-size:.9rem">هذه الصفحة لا ترسل شيئًا وحدها. انسخ الرسالة وأرسلها إلى فريق شفاء.</p></div>
+      </div>
+    </div>
+  </section>
+</article>
+</main>
+
+<footer class="ftr">
+  <div class="wrap ftr__in">
+    <a class="brand" href="#home" data-go="home"><i><svg><use href="#leaf"/></svg></i><span>شفاء</span><small>SHIFA</small></a>
+    <nav aria-label="روابط"><a href="#system" data-go="system">النظام</a><a href="#start" data-go="start">كيف نبدأ</a><a href="#questions" data-go="questions">أسئلة</a><a href="#contact" data-go="contact">تواصل</a></nav>
+    <small>نظام إدارة عيادات الأسنان · الشاشات المعروضة ببيانات تجريبية</small>
+  </div>
+</footer>
+
+<script src="vendor/gsap.min.js"></script>
+<script src="vendor/ScrollTrigger.min.js"></script>
+<script src="vendor/SplitText.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
