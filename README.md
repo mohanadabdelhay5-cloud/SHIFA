@@ -20,4 +20,4 @@ Settings → Pages → Source: "Deploy from a branch", branch `main`, folder `/ 
 ## Notes
 
 - Every name and figure shown on the site is demo data.
-- The contact form prepares a message to copy. It does not send anything.
+- WhatsApp is the only contact channel. The contact form builds the message and opens a `wa.me` chat with it filled in; the visitor presses send. The number lives in `index.html` (the `wa.me` links) and in `app.js` (`WA`).

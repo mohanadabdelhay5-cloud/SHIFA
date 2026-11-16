@@ -75,19 +75,23 @@ if(chart){
   $$('.tooth',chart).forEach(function(g){g.classList.toggle('sel',+g.dataset.n===36)});
 }
 
-/* ---------- contact: prepare a message, never pretend to send ---------- */
-var form=$('#form');
-if(form){
-  var draft=$('#draft'), pre=$('pre',draft), copy=$('#copy');
-  form.addEventListener('submit',function(e){e.preventDefault();
-    var lines=['طلب عرض لنظام شفاء'];
-    $$('input,select,textarea',form).forEach(function(i){if(i.value.trim()) lines.push(i.name+': '+i.value.trim())});
-    pre.textContent=lines.join('\n'); draft.classList.add('is-on'); copy.textContent='انسخ الرسالة'; if(hasG) ScrollTrigger.refresh();
+/* ---------- contact: WhatsApp only. The send button is a real link whose text follows the form ---------- */
+var WA='201022308027', HELLO='السلام عليكم، أريد عرضًا لنظام شفاء في عيادتي.';
+var form=$('#form'), send=$('#send'), preview=$('#preview'), nameIn=$('#f-name'), nameErr=$('#f-name-e');
+function waText(){
+  var lines=[HELLO];
+  $$('[data-k]',form).forEach(function(i){var v=i.value.replace(/\s+/g,' ').trim(); if(v) lines.push(i.dataset.k+': '+v)});
+  return lines.join('\n');
+}
+function waSync(){var t=waText(); preview.textContent=t; send.href='https://wa.me/'+WA+'?text='+encodeURIComponent(t);}
+if(form&&send){
+  form.addEventListener('input',function(){ if(nameIn.value.trim()){nameIn.classList.remove('bad');nameErr.hidden=true} waSync() });
+  form.addEventListener('submit',function(e){e.preventDefault();send.click()});
+  send.addEventListener('click',function(e){
+    waSync();
+    if(!nameIn.value.trim()){e.preventDefault();nameIn.classList.add('bad');nameErr.hidden=false;nameIn.focus()}
   });
-  copy.addEventListener('click',function(){
-    var ok=function(){copy.textContent='تم النسخ'}, no=function(){var r=document.createRange();r.selectNodeContents(pre);var s=getSelection();s.removeAllRanges();s.addRange(r);copy.textContent='تم التحديد، انسخ يدويًا'};
-    try{navigator.clipboard.writeText(pre.textContent).then(ok,no)}catch(err){no()}
-  });
+  waSync();
 }
 
 /* ---------- views ---------- */
@@ -115,7 +119,7 @@ function initView(el,intro){
 function show(name,intro){
   $$('.view').forEach(function(v){v.classList.toggle('is-active',v.dataset.view===name)});
   $$('[data-go]').forEach(function(a){a.classList.toggle('is-on',a.dataset.go===name)});
-  current=name; window.scrollTo(0,0); hdr.classList.remove('is-solid');
+  current=name; body.classList.toggle('view-contact',name==='contact'); window.scrollTo(0,0); hdr.classList.remove('is-solid');
   initView($('.view[data-view="'+name+'"]'),intro);
 }
 function drawLeaf(tl,at){
